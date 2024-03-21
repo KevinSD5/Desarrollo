@@ -15,6 +15,7 @@ const items = [{
 }
 ]
 
+import { Icon } from 'astro-icon/components';
 ---
 
 
@@ -28,12 +29,40 @@ const items = [{
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<header class="bg-amber-600 h-16 flex items-center ">
-		ESTE ES MI CABEZZALLLLLLL
+	<body></body>
+	<header class=" container max-w-7xl: mx-auto h-16 flex items-center 	">
+			<div class="flex space-x-6">
+				<img class="h-6" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="">
+				<div class="w-[2px] h-8 bg-slate-800">.</div>
+				<img class="h-6" src="public/XBOS.png" alt="" >
+			</div>
+			<menu class="ml-8">
+				<div class="flex items-center">
+					<a href="#" class="hover:underline underline-offset-8 decoration-2">
+						Game pass
+					</a>	
+					<Icon size={20} name="mdi:keyboard-arrow-down" />
+				</div>
+			</menu>
 	</header>
-	<body>
-		<header> Encabezado</header>
-		<div class="carrousel"> slider de imagenes</div>
+	
+	<div class="relative flex items-center">
+		<div class="absolute left-28 h-[80%] flex flex-col items-center  ">
+			<div>
+				<h4 class="bg-yellow-300">DISPONIBLE AHORA</h4>
+			</div>
+			<div>
+				<h1 class="text-white text-5xl font-bold"> FINAL FANTASY XIV</h1>
+			</div>
+			<div>
+				<h1  class="text-white text-5xl font-bold"> ONLINE</h1>
+			</div>
+			<div>
+				<p class="text-white text-5xl font-bold size-[34px]">Disfruta de una aventura aclamada por la crítica en Xbox Series X|S.</p>
+			</div>
+		</div>
+	<video aria-label="Ambient video alt text" poster="https://assets.xboxservices.com/assets/45/5a/455a189b-0e7a-48bc-a966-9bf5ec8c08c2.jpg?n=896254_Page-Hero-1084_1920x720_01.jpg" muted="" autoplay="" loop="" alt="Video de FINAL FANTASY XIV Online con imágenes del juego y cinemáticas"><source class="heroImgDesktop" src="https://assets.xboxservices.com/assets/12/ff/12ff90f8-439f-42a6-892b-1bf80f02f027.mp4?n=FFXIV-Online_HP-Video_1920x720_04.mp4" type="video/mp4" srcset="https://assets.xboxservices.com/assets/12/ff/12ff90f8-439f-42a6-892b-1bf80f02f027.mp4?n=FFXIV-Online_HP-Video_1920x720_04.mp4"></video>
+	</div>
 		<nav>
 			{ 
 				items.map((item)=> <a href="#" class="options">
@@ -44,42 +73,12 @@ const items = [{
 
 			
 		</nav>
-<div class="grid-container">
-<div class="area1">area1</div>
-<div class="area2">area2</div>
-<div class="area3">area3</div>
-<div class="area4">area4</div>
-</div>
+
 		<slot />
 	</body>
 </html>
 <style is:global>
-	.grid-container{
-		display: grid;
-		grid-template-areas: "area1 area1 area2 area3" 
-		                     "area1 area1 area2 area3" 
-							 "area4 area4 area4 area4"							;
-	}
-	.area1 {
-	grid-area: area1;
-	background-color: gold;
-	height: 60px;
-	}
-	.area2 {
-	grid-area: area2;
-	background-color: green;
-	height: 60px;
-	}
-	.area3 {
-	grid-area: area3;
-	background-color: rgb(223, 24, 67);
-	height: 60px;
-	}
-	.area4 {
-	grid-area: area4;
-	background-color: rgb(0, 12, 122);
-	height: 60px;
-	}
+	
 	.options{
 		display: flex;
 		flex-direction: column;
@@ -102,7 +101,7 @@ const items = [{
 	}
 
 	header{
-		background-color: #9d1ecf;
+		
 		height: 36px;
 		
 	}
